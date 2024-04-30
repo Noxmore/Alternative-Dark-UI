@@ -8,3 +8,13 @@ It is mainly inspired by the pixel-art UI elements of the Minecraft Wiki, and a 
 
 <img src="https://cdn-raw.modrinth.com/data/4iPGUEJA/images/8733a9838b3961f57b5083ee952f269667bd81ad.png"/>
 (Custom icons above are from my mods, not the pack)
+
+<br>
+<br>
+
+# Mod Support
+
+I only personally add mod support for mods i use, but i will accept PRs for other mods.
+
+Here is the list of currently supported mods:
+- Axiom
