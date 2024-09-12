@@ -22,7 +22,7 @@ void main() {
 	}
 	
 	// GUI text color hack fix, the alternitive is language files for *every* language.
-	if (vertexDistance > 100.0 && color.r > 0.247 && color.r < 0.25) color = vec4(1);
+	if (vertexDistance > 100.0 && color.r > 0.248 && color.r < 0.25) color = vec4(1);
 	
 	fragColor = linear_fog(color, vertexDistance, FogStart, FogEnd, FogColor);
 }
