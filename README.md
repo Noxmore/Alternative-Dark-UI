@@ -12,6 +12,9 @@ It is mainly inspired by the pixel-art UI elements of the Minecraft Wiki, and a 
 <br>
 <br>
 
+# Updating
+If i forget to update to the latest version, make an issue, and i'll get on it as soon as i can!
+
 # Mod Support
 
 I only personally add mod support for mods i use, but i will accept PRs for other mods.
