@@ -21,3 +21,4 @@ I only personally add mod support for mods i use, but i will accept PRs for othe
 
 Here is the list of currently supported mods:
 - Axiom
+- Mod Menu
