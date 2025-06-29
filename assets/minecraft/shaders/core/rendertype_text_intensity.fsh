@@ -15,14 +15,24 @@ in vec2 texCoord0;
 
 out vec4 fragColor;
 
+const float MIN = 0.248;
+const float MAX = 0.25;
+
 void main() {
-	vec4 color = texture(Sampler0, texCoord0) * vertexColor * ColorModulator;
+	// GUI text color hack fix, the alternative is language files for *every* language.
+	// This specifically targets the specific color of text in UIs.
+	vec4 correctedVertexColor;
+	if (vertexColor.r > MIN && vertexColor.r < MAX && vertexColor.r > MIN && vertexColor.r < MAX && vertexColor.r > MIN && vertexColor.r < MAX) {
+		correctedVertexColor = vec4(1);
+	} else {
+		correctedVertexColor = vertexColor;
+	}
+	
+	vec4 color = texture(Sampler0, texCoord0) * correctedVertexColor * ColorModulator;
 	if (color.a < 0.1) {
 		discard;
 	}
-	
-	// GUI text color hack fix, the alternitive is language files for *every* language.
-	if (vertexDistance > 100.0 && color.r > 0.248 && color.r < 0.25) color = vec4(1);
+
 	
 	fragColor = linear_fog(color, vertexDistance, FogStart, FogEnd, FogColor);
 }
